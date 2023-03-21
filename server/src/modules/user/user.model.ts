@@ -43,8 +43,7 @@ const userSchema = new mongoose.Schema<IUserDocument>(
 
 // hashing(encrypting) the password before saving
 userSchema.pre("save", async function (next) {
-    // @ts-ignore
-    let user = this as UserDocument;
+    let user = this as IUserDocument;
 
     if (!user.isModified("password")) {
         return next();

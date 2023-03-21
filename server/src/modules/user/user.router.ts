@@ -1,5 +1,5 @@
 import { Router } from "express";
-import validateResource from "../../middleware/validateResource";
+import { validateResource } from "../../middleware";
 import { createUserSchema, loginUserSchema } from "./user.schema";
 import { createUserHandler, loginHandler } from "./user.controller";
 
